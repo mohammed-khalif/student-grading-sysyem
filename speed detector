@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Speed Limit Checker</title>
+</head>
+<body>
+	<h1>Speed Limit Checker</h1>
+	<p>Enter the speed of the car:</p>
+	<input type="text" id="speedInput">
+	<button onclick="checkSpeed()">Check</button>
+
+	<script>
+		function checkSpeed() {
+			let speed = parseInt(document.getElementById("speedInput").value);
+
+			if (isNaN(speed) || speed < 0) {
+				alert("Please enter a valid positive integer");
+			} else if (speed < 70) {
+				alert("Ok");
+			} else {
+				let points = Math.floor((speed - 70) / 5);
+				if (points > 12) {
+					alert("License suspended");
+				} else {
+					alert(`Points: ${points}`);
+				}
+			}
+		}
+	</script>
+</body>
+</html>

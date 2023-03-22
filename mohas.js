@@ -1,5 +1,5 @@
 
-let marks = prompt("Enter student's marks (between 0 and 100): ");
+let marks =window.prompt("Enter student's marks (between 0 and 100): ");
 
 
 marks = Number(marks);
